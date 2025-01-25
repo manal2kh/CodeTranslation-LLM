@@ -12,7 +12,7 @@ def refactor_java_code(java_code):
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant for refactoring Java code without adding any comments or explanations."},
+            {"role": "system", "content": " refactoring Java code without adding any comments or explanations."},
             {"role": "user", "content": f"Please refactor the following Java code without adding any comments:\n{java_code}"}
         ]
     )
