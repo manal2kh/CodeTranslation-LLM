@@ -1,7 +1,7 @@
 import os
 import openai
 from dotenv import load_dotenv
-from tqdm import tqdm  # مكتبة tqdm لشريط التقدم
+from tqdm import tqdm  
 
 # Load the .env file to get the OpenAI API key
 load_dotenv()
@@ -38,7 +38,7 @@ for filename in tqdm(refactored_files, desc="Processing files", unit="file"):
     with open(os.path.join(input_dir, filename), 'r', encoding='utf-8') as file:
         java_code = file.read()
 
-    # Translate the Java code to the target language
+
     translated_code = translate_code(java_code, source_lang, target_lang)
 
     # Save the translated code to the output directory
